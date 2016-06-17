@@ -15,9 +15,9 @@ author: 'Zoe LeBlanc'
 nickname: zoe
 bio: 'chief data wrangler'
 url: 'http://zoeleblanc.com/'
-image: 'assets/images/zoe.png'
+image: 'assets/images/zoe.jpg'
 
-short_url: 'zoeleblanc.com/dispatchesfromcairo'
+short_url: 'zoeleblanc.com/dispatchesfromcairo/'
 google_analytics: 
 disqus: username
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
