@@ -1,13 +1,8 @@
-# tell Travis to spin up a ruby 2.2.0 environment
 language: ruby
 rvm:
 - 2.2
-
 script:
 - bundle exec jekyll build
-
-# after building, copy the site into the gh-pages branch
-# and push back to Github
 after_success:
 - git clone https://$GITHUB_REPO
 - cd $(basename ${GITHUB_REPO%.git})
@@ -18,9 +13,11 @@ after_success:
 - git add -A .
 - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
 - git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
-
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GITHUB_REPO: github.com/ZoeLeBlanc/dispatchesfromcairo.git
   - REPO_TARGET_BRANCH: gh-pages
+  - secure: Js0bITrzzkfq3Y9EmZvaLcaOrCcOE35duSTxwWhYQh7UtdSAgzMk/bVvzlNyZUd8CTOJlRHEiBiqmf7LycnUVhifd4Vpc+6fsE8fx+6AiwYDSgKGRHidXlPWHZyTvrcwzcUwR2gGHwAQ21Kw1qIolB1XDewWi0iZckNVo/jcww7MEinJQu7T4KhY0pWRpP4whCvCsCCFWGOK2OHm0EAvGU2NCQEDc1J93Crp3MXf1pS00r3/9BTilnx0dx8B6+HkNXXCaCWjIfIzT6KJCkOTnqym/Bwd+VE2Z3pbT1pSgWoSdUYmzjRxCVcb1Zc1OdNaSvFdoP1/ctPoAWkk3ub4ZaVwwCruGMDp8qSDdqYKNrP/hNDIacLNCHas8jiY0QLMn9udUAAWOv7xnzc6/xiplIeAxYTgSW1dZZAGkQs4Jq5KL7cqFs53HR8mqAjCi70AK4cLtAv4Tz18paJm9mzpPpnjMQ3UzzjhleINeDywja8uFTmrmomFjQNSlLk0yMupQVC4sbW+ua/T0Y9E/mdyNoPXY/qfGlixikZgM9GzmC2dKghmkGn0ula6+6p5XFX8WhdoN1FB76ZRuOhqYNLghxpaQFCjT8uMGWba1GIuTu/NACdSOTkwEMusNZXGHlNjgvUNIp0dvzEAkWJc2aPNSGHbTumaRJFR/l0zzMFsvGA=
+dd:
+  secure: t+5eT/lhMh6qwoX4JFshCLZsKOuRSsunnjBIY1GsnonHrwcP54/CSzmGJC2MnrhkG982YTl/SPu6xsM51WXc7Nx11HLGpgIltZQ1u4AGbarhO2u3C1zUdzxwuuY5Qh1ofzG4GW3xGF3SqmPuvUI3+ozuM8T2/TQh1Z5qI8+g+7miTGt4K/kWS5A59v0/rhYwd+7W56db8KuyL1qNFmzepiyS0M6QXbToucQP6wZ+wk+pJLDXfAPaTPA+/imctc6yyVCeUyxXj3fk7X8Yw1c1pFWiDuwDbmGh53kb4v2TSZgMPd4l+oshsaBowThFdRG5FIqJ9MDZiIdDVgnixxhvcdHiI8Ge2xQ9Qw/6XHie/w6sqsmdJy2CMdn0hdEg/w79AMuZHOsZN6jY8x4Ru7ATZWt6I6fR/RXorG0Fted4ayOy6RmVdGDwO3wapPfen55g7Xx31zYR/w5gRGYRO/vNszyRZv+5cTTPu93Zh9ZnN1BJXUXHkV9BJFzR//W3B1G9vK93hHtTWmtIvt5jPfdULsh8C1gjy21T11VW5oKFmqzkytuV3NhnkSqmSrAoomusCHWaZpgZ8MBaiWWCE4ESbLe82Hw2weB3sqb86lSq+bH63PiBlIH0QNdVgAzwCNNh96Vy6FQdiCPXASr5djCYnCSZyDZPVc5w+Ai/D98tk4A=
