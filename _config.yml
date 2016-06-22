@@ -56,7 +56,7 @@ safe: false
 lsi: false
 username: ZoeLeBlanc
 repo: dispatchesfromcairo
-branch: master
+branch: gh-pages
 relative_source: ../dispatchesfromcairo/
 destination: ../dispatchesfromcairo-pages/
 production_url:  https://zoeleblanc.com/dispatchesfromcairo/
