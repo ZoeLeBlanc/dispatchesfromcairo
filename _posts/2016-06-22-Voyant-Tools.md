@@ -6,6 +6,9 @@ date:   2016-06-22 10:18:00
 tags: visualizations
 subclass: 'post tag-visualizations'
 categories: 'visualizations'
+cover: 'assets/images/cover2.jpg'
+navigation: True
+logo: 'assets/images/logo.png'
 ---
 
 Record Group 84, Egypt US Embassy Records 1959-1961 Unclassified Box 9
