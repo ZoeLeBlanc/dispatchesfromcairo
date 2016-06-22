@@ -1,24 +1,16 @@
 ---
 layout: post
 cover: false
-title: Gettysburg Address
-date:   1863-11-19 10:18:00
-tags: fiction
-subclass: 'post tag-visualization'
-categories: 'casper'
+title: Voyant Tools
+date:   2016-06-22 10:18:00
+tags: visualizations
+subclass: 'post tag-visualizations'
+categories: 'visualizations'
 ---
+
+Record Group 84, Egypt US Embassy Records 1959-1961 Unclassified Box 9
 
 <!--    Exported from Voyant Tools: http://voyant-tools.org/.
 Please note that this is an early version and the API may change.
 Feel free to change the height and width values below: -->
-<iframe style='width: 100%; height: 800px' src='http://voyant-tools.org:80/?view=Summary&corpus=8ff1d82fb92c5db308baa27c42a9b9ec'></iframe>
-
-Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
-
-Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
-
-But, in a larger sense, we can not dedicate-we can not consecrate-we can not hallow-this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us-that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion-that we here highly resolve that these dead shall not have died in vain-that this nation, under God, shall have a new birth of freedom-and that government of the people, by the people, for the people shall not perish from the earth.
-
-By **Abraham Lincoln**
-
-The 16th president of the USA until he was assassinated in April of 1963. He led the US through its Civil War - its bloodiest and greatest moral, constitutional and political crisis.
+<iframe style='width: 100%; height: 800px' src='http://voyant-tools.org:80/?analysis=pca&limit=500&dimensions=2&clusters=5&comparisonType=raw&corpus=19c5cdf8c6b39b006736560a952526eb&view=ScatterPlot'></iframe>
