@@ -8,6 +8,11 @@ subclass: 'post tag-fiction'
 categories: 'casper'
 ---
 
+<!--    Exported from Voyant Tools: http://voyant-tools.org/.
+Please note that this is an early version and the API may change.
+Feel free to change the height and width values below: -->
+<iframe style='width: 100%; height: 800px' src='http://voyant-tools.org:80/?view=Summary&corpus=8ff1d82fb92c5db308baa27c42a9b9ec'></iframe>
+
 Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
 
 Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
