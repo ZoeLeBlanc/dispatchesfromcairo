@@ -4,6 +4,8 @@ rvm:
 - 1.9.3
 - jruby-19mode
 - rbx-2
+
+script: bundle exec rake site:deploy --quiet
 env:
   global:
   - secure: UAXqin6KonEupAM0AthgSwW8/DhY45cNCaB59Z1NxAu3DOzUPnYrRHTKEjkjjH0SS+mbQ8GCrRdARDPcriJmDkyT2wJvxwQcxVPz9WRs59Wa7lTA7VgPV/yW9tACgeCYtuZHVpDQ56k71OUOtpmKc/F1jlH6F/RKZS7OoIrVZg3kLkRgOlSZotaIbTEqevFR1lD8jgZ1SeJofRUNWsMfy580Vu+yx0nFx8UO8PnCm87lTXGwX0NzKUFs5osBz7/zhfu42T5/SRyrvHaB/kW/2a8MLNsx7hZlchsCQRnGAK15Lqc4H9SvFDgIOt7mcthYfE5b4XaSo0X+7/p013EtujCgWioiBGt6w0UrCmzy6vXiSJYjRznC82LP+edJGt/VO1Z0qa9MSGZsVQRA6leDILirys5M+rUZJ524/B/qJ7X8UrYqSs0kf2YRQv8OUwIp2M41NH7yyKNq1oSitvXtrHrHzIOD/nB9aXopW8QDsGz+c13sdemUDdoVFuOxoxjWagwFogUSVPs58nEwwNMVj/Buye28E5dPf9QCZH/WNkvJPJOre7DUo9xjMZgRlg8+sRuXt1PU5eEL7J2/aNi/xzom2Yxwl8G4gwhDv+n1D8nby8i52b0SjjJKUjViZxBChMBMA/LmTTtvMI26iFov5qyBifiUjtvAlF0YvSyzyxQ=

@@ -1,11 +1,11 @@
 ---
 layout: post
 cover: false
-title: Textplot
+title: French in Diplomatic Cables
 date:   2016-06-22 10:18:00
-tags: visualizations
+tags: visualizations research
 subclass: 'post tag-visualizations'
-categories: 'visualizations'
+categories: 'visualizations' 
 cover: 'assets/images/cover2.jpg'
 navigation: True
 logo: 'assets/images/logo.png'

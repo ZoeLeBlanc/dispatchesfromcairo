@@ -8,11 +8,15 @@ current: tag
 ---
 
 <!-- < dynamically overriding backgrounds for tags as well as descriptions -->
-{% if page.url contains 'visualizations' %}
+{% if page.url contains 'research' %}
+    {% assign new_cover='assets/images/cover1.jpg' %}
+   {% assign tag_description='Research posts.' %}
+{% elsif page.url contains 'visualizations' %}
+    {% assign new_cover='assets/images/cover1.jpg' %}
    {% assign tag_description='A series of visualizations.' %}
-{% elsif page.url contains 'SHAFR' %}
-    {% assign new_cover='assets/images/cover7.jpg' %}
-    {% assign tag_description='SHAFR 2016 Presentation.' %}
+{% elsif page.url contains 'presentations' %}
+    {% assign new_cover='assets/images/cover1.jpg' %}
+    {% assign tag_description='Presentations on this project.' %}
 {% elsif page.url contains 'fiction' %}
     {% assign new_cover='assets/images/cover1.jpg' %}
 {% endif %}

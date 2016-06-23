@@ -6,8 +6,9 @@
     <ul>
         <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">Home</a></li>
         <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li>
+        <li class="nav-research {% if page.url contains 'research' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/research">Research</a></li>
         <li class="nav-visualizations {% if page.url contains 'visualizations' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/visualizations">Visualizations</a></li>
-        <li class="nav-SHAFR {% if page.url contains 'SHAFR' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/shafr">SHAFR</a></li>
+        <li class="nav-presentations {% if page.url contains 'presentations' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/presentations">Presentations</a></li>
     </ul>
     <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
 </div>

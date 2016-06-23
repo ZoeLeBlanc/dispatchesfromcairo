@@ -1,14 +1,13 @@
 ---
 layout: post
-cover: false
-title: I Have a Dream
-date:   1963-08-28 10:18:00
-tags: speeches
-subclass: 'post tag-speeches'
-categories: 'casper'
+cover: 'assets/images/cover1.jpg'
+title: American Embassy in Cairo Reading List
+date:   2016-06-22 10:18:00
+tags: research
+subclass: 'post tag-research'
+categories: 'research'
 navigation: True
-logo: 'assets/images/ghost.png'
-cover: 'assets/images/cover4.jpg'
+logo: 'assets/images/logo.png'
 ---
 
 I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.
