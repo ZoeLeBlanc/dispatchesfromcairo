@@ -5,7 +5,7 @@ title: Cleaning and Sharing Data
 date: 2016-06-22 10:18:00
 tags: research
 subclass: 'post tag-research'
-categories: 'research'
+categories: 'zoe'
 navigation: True
 logo: 'assets/images/logo.png'
 ---
