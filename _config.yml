@@ -71,3 +71,5 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
+include:
+  - .nojekyll

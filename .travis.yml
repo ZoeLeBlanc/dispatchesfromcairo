@@ -4,6 +4,15 @@ rvm:
 - 1.9.3
 - jruby-19mode
 - rbx-2
+before_script:
+openssl aes-256-cbc -K $encrypted_4f28045c9e76_key -iv $encrypted_4f28045c9e76_iv -in .travisdeploykey.enc -out .travisdeploykey -d
+chmod go-rwx .travisdeploykey
+- eval `ssh-agent -s`
+- ssh-add .travisdeploykey
+- git config user.name "Travis-CI"
+- git config user.email "noreply@travis-ci.org"
+- COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from `git log -n 1 --format='commit %h - %s'`"
+
 
 script: bundle exec rake site:deploy --quiet
 env:
