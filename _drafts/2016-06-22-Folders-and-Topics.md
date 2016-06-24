@@ -10,4 +10,4 @@ navigation: True
 logo: 'assets/images/logo.png'
 ---
 
-{% include mallet.html %}
+I've mentioned previously that finding relevant documents in the folders in the boxes at NARA can be tricky because of the place 
