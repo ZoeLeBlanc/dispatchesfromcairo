@@ -5,7 +5,7 @@ title: Finding Trends and Deforming Texts
 date:   2016-06-22 10:18:00
 tags: visualizations
 subclass: 'post tag-visualizations'
-categories: 'visualizations'
+categories: 'Zoe LeBlanc'
 cover: 'assets/images/cover1.jpg'
 navigation: True
 logo: 'assets/images/logo.png'
