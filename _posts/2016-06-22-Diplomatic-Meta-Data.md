@@ -6,7 +6,7 @@ date:   2016-06-22 10:18:00
 tags: visualizations
 subclass: 'post tag-visualizations'
 categories: 'visualizations'
-cover: 'assets/images/cover2.jpg'
+cover: 'assets/images/cover1.jpg'
 navigation: True
 logo: 'assets/images/logo.png'
 ---
