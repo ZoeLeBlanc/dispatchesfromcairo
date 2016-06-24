@@ -5,15 +5,15 @@ rvm:
 - jruby-19mode
 - rbx-2
 before_script:
-openssl aes-256-cbc -K $encrypted_4f28045c9e76_key -iv $encrypted_4f28045c9e76_iv -in .travisdeploykey.enc -out .travisdeploykey -d
-chmod go-rwx .travisdeploykey
+- openssl aes-256-cbc -K $encrypted_4f28045c9e76_key -iv $encrypted_4f28045c9e76_iv
+  -in .travisdeploykey.enc -out .travisdeploykey -d
+- chmod go-rwx .travisdeploykey
 - eval `ssh-agent -s`
 - ssh-add .travisdeploykey
 - git config user.name "Travis-CI"
 - git config user.email "noreply@travis-ci.org"
-- COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from `git log -n 1 --format='commit %h - %s'`"
-
-
+- COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from `git log -n
+  1 --format='commit %h - %s'`"
 script: bundle exec rake site:deploy --quiet
 env:
   global:
@@ -21,3 +21,11 @@ env:
   - secure: HfiF+4Kw6puODr3Ol1iih34vsPTgoYfywW2b9/zEaT4Eg+oLEC/xke6+XTiwd1ikSU/LqmSom8vWTYXrLW266WnuTQInZLRd2lWsJ6pih19HISr0D/PBvqnMAdhnJMQ7hQRHLNNIIhwlEa7sZbNY20yD2sc1uICOGAUihbpsN0oGNgOC+3d1sNY6y895ktYJZPcNSpE3FiqC3nOAaaJxgRr9ApOxOF1WXpQ3CzFQGdz70RlMX2fYcCzRGbK5g7MWgrUgaKCaZUPEOgB4SC4DxSodeJlh2BMesiha76KtSnKfCooylc9fHdCn7DIw5eUwFWKlW/sAOZ5ho4feKZMEeF5cgn+T6VWrnzfjO8CnVfnIpJ2TCESKF2ERCjfcb6UQ/dXhEouAh2LcKYSDEdRBMLLKMWWsApmc3HhGF/8ATXKumU5PZDVZHPfGUNV5+b/jLoUKFwH6eQUtkb3F+/NsDtuzlaDSnzFQM5d8BdwtoaCmIDt1n0jgI0ZAVZnYgpntAcS7UEWIvVK6iCBhCK4BhX3sRij3Nb4BBZ3MJLvmlLOOuk0m8kmaj1VkMZGpnMwEddPHwvjHOiuA6RDb54f0f+cRDYLTDtQ7Y8xCAYlOM/VU3k3yWDZ+3jfsH8Ww/xZr/1cnefcDlxJAnsmZYHUOBGAxbsSNkmev8u6ONM5fVqI=
 dd:
   secure: Jyr4ydzEvuR9nGoc3CpcqPb5CfwA8aUml7g8mYBXz9fCyUGxvxmsZt2Oh4tdC8UAcMXW4gAejPs06R1TOAmuzW70C5V+5AfVw8BGSF3BERn2k2sJ4BMVG88g2XJ0qnTF4ISbham/yiYbCPV7E21LRVKf7Mpr/i4L7C6r+ZnNCek1EjQs9LBKnthMtzZjzBhFL5ehtLq+JR0FHkus+XQaMQmuFWu7gU4SD4TTzQwnP+mx11pdv+mDnIWWac6bQe/WxktVJGLBGv3QvU1NTXpWTKuoB2ng6NXBtVs6QsAgl3lqu3dvCQqNTWF1tJdxxGSsWVatMi7TTL/XJLQksJj4IF98xrXeK/0uVZu6XgOwUxpcq1Jk3BpNSffcsB8Ccw+dC7o0gG8zedfBLUIp0kDQmoZKfI73sU5/YAqIcP9tuxvykmd0Uiu1z8m0Rwx8GZA9qHqRqDGaEbPNYI+tl5BlXoqEJnf8X/4Wu90V6wAWzn8e8x0pHrGOd1Khvymiy9IJ5XziIjL4Tu7esY79iP5h8+rF0W0c43+U6VcqHdbUDEPhoxe3tc4POFH523InvD9y87mT0kg2afESMsyLGje0KmjssxkYrpnNkRQhoQLfwS/GJqxVGRykavKL8+CZTbsovDdpVq63ocIJNoHDBayZeExXTdnQIVmdj0N4fKCTUys=
+deploy:
+  provider: releases
+  api_key:
+    secure: jYqjzlyziSRr81SYBcffLcvGxGyk+WyNHa+QeKP9VRLvyDh6wGWn6u2XtZz82etg6hzn6WZtEw2xLnX32eIbmGmDygKLPJwvG6GQs5C4hrgGfdHFNcj0bHaIKXREiPBIpqp4misMtaZ6kOPLvl26JHIG+KpR7XPS8KO1i7uTBoEcpPMlw2SAehoY1Eq8LnAwhsUCQ85pS0J9pSPZijNJ+uNxHCt4/2R6JMnxfcA/yfwNneodDC3Ttmt5fooQL6gwWT6AQcjaSNc+R9SkWgoqW5ICLW8nBp0707VFmi+PBmHn7fuVoimwtRj5rq/95UDA7ZMjI4sc7rmb6QrmBPGShCAsLfQ14gNEYlpGjEcNUuS2TeKxvTzArV6v+Sp8Ge2Q8NHuW31rVfRZVgsFNr6+D1BEj9iArrOLrCfhZ4naaN3zF5szGmsUejrf7T/DoScZnQCxfwz5dR5pVtW2pJdDV15xRblKJy3ebS7cGtOcRCbSRDAZ5MRA5GdA3UYMY9T6F8KZtNnjO71N4/yz3Y9eLchWf45R4jxqaHVA8h8AxRwrKJkGMvPyy+67rqkMwHbBDpgNa87ZVeJvYTzUSJY1nOFZ0AjfkyxslguwxX4bNQhNQHqVmpRMadWmpLEi32GMff1l24cK2rtYxS3JaB7lNhtQy2igL8rS2DfvQImHssA=
+  file: ''
+  on:
+    repo: ZoeLeBlanc/dispatchesfromcairo
+    branch: gh-pages
